@@ -1,0 +1,18 @@
+<form action="slogin" method="post">
+    {% csrf_token %}
+    USERNAME<input type="text" name="username" /><br>
+    PASSWORD<input type="password" name="password" /><br>
+    <input type="submit" value="Login" />
+</form>
+<h1>
+    <a href="signup">SIGN UP FOR STUDENTS</a>
+</h1>
+<h1>
+    <a href="tsignup">SIGN UP FOR TRAINERS</a>
+</h1>
+<h1>
+    <a href="shome">STUDENT PORTAL</a>
+</h1>
+{% for message in messages %}
+{{message}}
+{% endfor %}

@@ -1,0 +1,16 @@
+<form action="" method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    USERNAME{{form.username}}<br>
+    FIRST_NAME{{form.first_name}}<br>
+    LAST_NAME{{form.last_name}}<br>
+    EMAIL{{form.email}}<br>
+    PASSWORD{{form.password}}<br>
+    MOBILE{{form.mobile}}<br>
+    JOIN DATE{{form.join_date}}<br>
+    TOTAL FEES{{form.total_fees}}<br>
+    MODULE{{form.module}}<br>
+    IMAGE{{form.image}}<br>
+    STATUS{{form.status}}<br>
+    OFFICE{{form.joining_location}}<br>
+   <input type="submit" value="SIGN UP" />
+</form>

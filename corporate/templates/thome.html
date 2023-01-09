@@ -1,0 +1,31 @@
+<h1>welcome to thome</h1>
+<table align="center" border="1px">
+    <tr>
+        <th>ID</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>EMAIL</th>
+        <th>MOBILE</th>
+        <th>JOIN_DATE</th>
+        <th>TOTAL_FEES</th>
+        <th>MODULE</th>
+        <th>STATUS</th>
+        <th>JOINING_LOCATION</th>
+        <th>IMAGE</th>
+    </tr>
+    {% for i in st %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.join_date}}</td>
+            <td>{{i.total_fees}}</td>
+            <td>{{i.module}}</td>
+            <td>{{i.status}}</td>
+            <td>{{i.joining_location}}</td>
+            <td><img src="{{i.image.url}}" height="100px" width="100px" /></td>
+        </tr>
+    {% endfor %}
+</table>

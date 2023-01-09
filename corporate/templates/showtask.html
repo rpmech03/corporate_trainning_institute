@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    welcome {{user.first_name}}
+    <table align="center" border="1px">
+        <tr>
+            <th>TOPICS</th>
+            <th>TIMINGS</th>
+            <th>DATE</th>
+            <th>REMARKS</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.topics}}</td>
+            <td>{{i.timings_for_day}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.remarks}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

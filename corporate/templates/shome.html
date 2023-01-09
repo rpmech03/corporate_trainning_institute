@@ -1,0 +1,12 @@
+{% if user.is_authenticated %}
+welcome {{user.first_name}}<br>
+<a href="viewremarks?uname={{user.username}}">view remarks</a>
+<form action="submittask" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="username" value="{{user.username}}" />
+    TOPICS<textarea name="topics" rows="5" cols="35"></textarea><br>
+    TIMINGS FOR DAY<textarea name="timing" rows="3" cols="35"></textarea><br>
+    </textarea>
+    <input type="submit" value="POST" />
+</form>
+{% endif %}

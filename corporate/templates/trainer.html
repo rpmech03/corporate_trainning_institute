@@ -1,0 +1,12 @@
+<form action="tlogin" method="post">
+    {% csrf_token %}
+    USERNAME<input type="text" name="username" /><br>
+    PASSWORD<input type="password" name="password" /><br>
+    <input type="submit" value="Login" />
+</form>
+<h1>
+    <a href="tsignup">SIGN UP</a>
+</h1>
+{% for message in messages %}
+{{message}}
+{% endfor %}
